@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Υπηρεσίες – Delta Energy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAV ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="https://deltaenergy.gr/wp-content/uploads/2025/09/delta-logo.png" alt="Delta Energy Logo" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <span class="nav-logo-fallback"><span class="logo-delta">Δ</span>DELTA<span class="logo-energy">ENERGY</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="etaireia.html">Εταιρεία</a></li>
+        <li class="has-dropdown">
+          <a href="ypiresies.html" style="color:var(--green)">Υπηρεσίες <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="meiosi-kostous.html">Μείωση Κόστους Ενέργειας</a></li>
+            <li><a href="diacheirisi-energeias.html">Διαχείριση Ενέργειας</a></li>
+            <li class="has-sub">
+              <a href="fotovoltaika.html">Φωτοβολταϊκά <svg class="nav-chevron-r" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <ul class="nav-sub">
+                <li><a href="aytoparagogi.html">Αυτοπαραγωγή</a></li>
+                <li><a href="fotovoltaika-parka.html">Φωτοβολταϊκά Πάρκα</a></li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a href="ilektrokinisi.html">Ηλεκτροκίνηση <svg class="nav-chevron-r" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <ul class="nav-sub">
+                <li><a href="ilektrokinisi-ofeli.html">Οφέλη Ηλεκτροκίνησης</a></li>
+                <li><a href="ilektrokinisi-fortistes.html">Φορτιστές</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="projects.html">Τα Project μας</a></li>
+        <li><a href="index.html#news">Νέα</a></li>
+        <li><a href="index.html#contact">Επικοινωνία</a></li>
+      </ul>
+      <button class="nav-cta" onclick="window.location='index.html#contact'">Επικοινωνήστε μαζί μας</button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="etaireia.html"              class="mm-link">Εταιρεία</a>
+      <a href="ypiresies.html"             class="mm-link">Υπηρεσίες</a>
+      <a href="meiosi-kostous.html"        class="mm-link mm-sub">↳ Μείωση Κόστους</a>
+      <a href="diacheirisi-energeias.html" class="mm-link mm-sub">↳ Διαχείριση Ενέργειας</a>
+      <a href="fotovoltaika.html"          class="mm-link mm-sub">↳ Φωτοβολταϊκά</a>
+      <a href="ilektrokinisi.html"         class="mm-link mm-sub">↳ Ηλεκτροκίνηση</a>
+      <a href="projects.html"              class="mm-link">Τα Project μας</a>
+      <a href="index.html#news"            class="mm-link">Νέα</a>
+      <a href="index.html#contact"         class="mm-link">Επικοινωνία</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ PAGE HERO ═══ -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://deltaenergy.gr/wp-content/uploads/2024/03/service-6.jpg')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-accent"></div>
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Αρχική</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Υπηρεσίες</span>
+      </div>
+      <h1 class="page-hero-title">Οι Υπηρεσίες μας</h1>
+      <p class="page-hero-sub">Ολοκληρωμένες ενεργειακές λύσεις για επιχειρήσεις και ιδιώτες — από τη μελέτη ως τη συντήρηση.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SERVICES GRID ═══ -->
+  <section class="inner-section">
+    <div class="container">
+      <div class="service-cards-grid">
+
+        <!-- Card 1: Μείωση Κόστους -->
+        <div class="srv-card reveal-up">
+          <div class="srv-card-icon">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 4 C10 4 6 8 6 12 C6 20 16 28 16 28 C16 28 26 20 26 12 C26 8 22 4 16 4Z" stroke="#89EA5F" stroke-width="1.8" stroke-linejoin="round"/><path d="M13 14 L15 12 L17 14 L19 12" stroke="#89EA5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Μείωση Κόστους Ενέργειας</h3>
+          <p>Αξιοποιούμε την ελευθεροποίηση της αγοράς ενέργειας και διαπραγματευόμαστε βέλτιστα τιμολόγια για επιχειρήσεις και ιδιώτες από το 2011. Άμεση εξοικονόμηση, χωρίς επενδύσεις.</p>
+          <a href="meiosi-kostous.html" class="srv-card-link">Μάθετε περισσότερα →</a>
+        </div>
+
+        <!-- Card 2: Διαχείριση Ενέργειας -->
+        <div class="srv-card reveal-up delay-1">
+          <div class="srv-card-icon">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="4" stroke="#89EA5F" stroke-width="1.8"/><path d="M10 20 L14 14 L18 17 L22 10" stroke="#89EA5F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Διαχείριση Ενέργειας</h3>
+          <p>Έξυπνοι μετρητές και ψηφιακή πλατφόρμα παρακολούθησης σε πραγματικό χρόνο. Γνωρίστε ακριβώς πού πηγαίνει κάθε kWh και λάβετε αποφάσεις βάσει δεδομένων.</p>
+          <a href="diacheirisi-energeias.html" class="srv-card-link">Μάθετε περισσότερα →</a>
+        </div>
+
+        <!-- Card 3: Φωτοβολταϊκά -->
+        <div class="srv-card reveal-up delay-2">
+          <div class="srv-card-icon">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" stroke="#89EA5F" stroke-width="1.8"/><path d="M16 4v3M16 25v3M4 16h3M25 16h3M7.1 7.1l2.1 2.1M22.8 22.8l2.1 2.1M22.8 9.2l2.1-2.1M7.1 24.9l2.1-2.1" stroke="#89EA5F" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Φωτοβολταϊκά</h3>
+          <p>Εγκατάσταση φωτοβολταϊκών συστημάτων για αυτοπαραγωγή ή πώληση ενέργειας. Μελέτη, αδειοδότηση, εγκατάσταση και σύνδεση με το δίκτυο — όλα σε ένα χέρι.</p>
+          <a href="fotovoltaika.html" class="srv-card-link">Μάθετε περισσότερα →</a>
+        </div>
+
+        <!-- Card 4: Ηλεκτροκίνηση -->
+        <div class="srv-card reveal-up delay-3">
+          <div class="srv-card-icon">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M8 20 L6 26 H26 L24 20 L22 12 H10 Z" stroke="#89EA5F" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 12 L14 6 H18 L20 12" stroke="#89EA5F" stroke-width="1.8" stroke-linejoin="round"/><circle cx="11" cy="26" r="2" fill="#89EA5F"/><circle cx="21" cy="26" r="2" fill="#89EA5F"/></svg>
+          </div>
+          <h3>Ηλεκτροκίνηση</h3>
+          <p>Υποδομές φόρτισης ηλεκτρικών οχημάτων για επιχειρήσεις, ξενοδοχεία και πολυκατοικίες. Στρατηγικές συνεργασίες με ηγέτες της αγοράς όπως η ABB.</p>
+          <a href="ilektrokinisi.html" class="srv-card-link">Μάθετε περισσότερα →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA ═══ -->
+  <section class="inner-section alt-bg" style="text-align:center">
+    <div class="container">
+      <div class="section-label text-center">Ξεκινήστε σήμερα</div>
+      <h2 class="section-title text-center">Δωρεάν ενεργειακή αξιολόγηση</h2>
+      <p style="color:var(--text-muted);max-width:560px;margin:0 auto 32px;line-height:1.8">Επικοινωνήστε μαζί μας για μια δωρεάν, χωρίς δέσμευση, ανάλυση του ενεργειακού προφίλ σας και ανακαλύψτε πόσο μπορείτε να εξοικονομήσετε.</p>
+      <a href="index.html#contact" class="btn-primary">Επικοινωνήστε μαζί μας</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ════ -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="https://deltaenergy.gr/wp-content/uploads/2025/09/delta-logo.png" alt="Delta Energy" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="footer-logo-text" style="display:none"><span class="logo-delta">Δ</span>DELTA<span class="logo-energy">ENERGY</span></div>
+          </div>
+          <p class="footer-tagline">Ενεργειακοί Σύμβουλοι<br />Μελέτη · Εγκατάσταση · Συντήρηση</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/p/Delta-Energy-61554186661328/" target="_blank" rel="noopener" aria-label="Facebook" class="fsocial facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="https://www.instagram.com/deltaenergy__official/" target="_blank" rel="noopener" aria-label="Instagram" class="fsocial instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.4A4 4 0 1112.6 8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.linkedin.com/company/deltaenergygr/" target="_blank" rel="noopener" aria-label="LinkedIn" class="fsocial linkedin"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Υπηρεσίες</h5><ul><li><a href="meiosi-kostous.html">Μείωση Κόστους Ενέργειας</a></li><li><a href="diacheirisi-energeias.html">Διαχείριση Ενέργειας</a></li><li><a href="fotovoltaika.html">Φωτοβολταϊκά</a></li><li><a href="ilektrokinisi.html">Ηλεκτροκίνηση</a></li></ul></div>
+        <div class="footer-col"><h5>Εταιρεία</h5><ul><li><a href="etaireia.html">Ποιοι είμαστε</a></li><li><a href="projects.html">Τα Project μας</a></li><li><a href="pistopoiiseis.html">Πιστοποιήσεις</a></li><li><a href="kariera.html">Καριέρα</a></li><li><a href="index.html#news">Νέα</a></li><li><a href="chrisimoi-syndesmoi.html">Χρήσιμοι Σύνδεσμοι</a></li></ul></div>
+        <div class="footer-col"><h5>Επικοινωνία</h5><ul class="footer-contact-list"><li><a href="tel:+302109210702">+30 210 921 0702</a></li><li><a href="mailto:info@deltaenergy.gr">info@deltaenergy.gr</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Θριασίων+17+Άνω+Πετράλωνα+Αθήνα+Ελλάδα" target="_blank" rel="noopener" class="footer-map-link">Θριασίων 17, Άνω Πετράλωνα</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2025 Delta Energy. Όλα τα δικαιώματα διατηρούνται.</span><div class="footer-bottom-links"><a href="legal.html" target="_blank">Όροι Χρήσης &amp; Πολιτική Απορρήτου</a></div></div></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="cursor-fx.js"></script>
+</body>
+</html>

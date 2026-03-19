@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delta Energy – Ενεργειακοί Σύμβουλοι</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAV ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="https://deltaenergy.gr/wp-content/uploads/2025/09/delta-logo.png"
+             alt="Delta Energy Logo"
+             class="nav-logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <span class="nav-logo-fallback">
+          <span class="logo-delta">Δ</span>DELTA<span class="logo-energy">ENERGY</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="etaireia.html">Εταιρεία</a></li>
+        <li class="has-dropdown">
+          <a href="ypiresies.html">Υπηρεσίες <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="meiosi-kostous.html">Μείωση Κόστους Ενέργειας</a></li>
+            <li><a href="diacheirisi-energeias.html">Διαχείριση Ενέργειας</a></li>
+            <li class="has-sub">
+              <a href="fotovoltaika.html">Φωτοβολταϊκά <svg class="nav-chevron-r" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <ul class="nav-sub">
+                <li><a href="aytoparagogi.html">Αυτοπαραγωγή</a></li>
+                <li><a href="fotovoltaika-parka.html">Φωτοβολταϊκά Πάρκα</a></li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a href="ilektrokinisi.html">Ηλεκτροκίνηση <svg class="nav-chevron-r" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <ul class="nav-sub">
+                <li><a href="ilektrokinisi-ofeli.html">Οφέλη Ηλεκτροκίνησης</a></li>
+                <li><a href="ilektrokinisi-fortistes.html">Φορτιστές</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="projects.html">Τα Project μας</a></li>
+        <li><a href="#news">Νέα</a></li>
+        <li><a href="#contact">Επικοινωνία</a></li>
+      </ul>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Επικοινωνήστε μαζί μας
+      </button>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="etaireia.html"              class="mm-link">Εταιρεία</a>
+      <a href="ypiresies.html"             class="mm-link">Υπηρεσίες</a>
+      <a href="meiosi-kostous.html"        class="mm-link mm-sub">↳ Μείωση Κόστους</a>
+      <a href="diacheirisi-energeias.html" class="mm-link mm-sub">↳ Διαχείριση Ενέργειας</a>
+      <a href="fotovoltaika.html"          class="mm-link mm-sub">↳ Φωτοβολταϊκά</a>
+      <a href="ilektrokinisi.html"         class="mm-link mm-sub">↳ Ηλεκτροκίνηση</a>
+      <a href="projects.html"              class="mm-link">Τα Project μας</a>
+      <a href="#news"                      class="mm-link">Νέα</a>
+      <a href="#contact"                   class="mm-link">Επικοινωνία</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ════ -->
+  <section id="hero">
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+      <source src="intro/intro.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-bg-fx">
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title reveal-up">
+        Ενισχύοντας το μέλλον<br />
+        <span class="gradient-text">με Ανανεώσιμες πηγές</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-1">
+        Μετατρέπουμε κάθε καταναλωτή σε ενεργειακά αυτόνομο παραγωγό ενέργειας —<br />
+        με μελέτη, εγκατάσταση και υποστήριξη που καλύπτει <strong>όλη την Ελλάδα</strong>.
+      </p>
+      <div class="hero-actions reveal-up delay-2">
+        <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+          Ανακαλύψτε τις Υπηρεσίες
+        </button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Δωρεάν Μελέτη
+        </button>
+      </div>
+    </div>
+    <div class="hero-scroll-hint reveal-up delay-4">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ════ -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label reveal-left">Ποιοι είμαστε</div>
+          <h2 class="section-title reveal-left delay-1">
+            Ενεργειακοί Σύμβουλοι<br />από το 2011
+          </h2>
+          <p class="about-para reveal-left delay-2">
+            Η <strong>Delta Energy</strong> εξετάζει και ανακαλύπτει λύσεις μείωσης κατανάλωσης
+            και κόστους ενέργειας σε ενεργοβόρες εγκαταστάσεις του βιομηχανικού, εμπορικού,
+            ιδιωτικού και δημόσιου τομέα, έχοντας πάντα γνώμονα την προστασία του
+            περιβάλλοντος και τη βιώσιμη διαχείριση της ενέργειας.
+          </p>
+          <p class="about-para reveal-left delay-3">
+            Η φιλοσοφία μας είναι να μετατρέψουμε κάθε καταναλωτή σε
+            <em>ενεργειακά αυτόνομο παραγωγό ενέργειας</em>.
+            Αναλαμβάνουμε το σύνολο της διαδικασίας — από τη μελέτη και την αδειοδότηση
+            έως την εγκατάσταση και τη μακροχρόνια συντήρηση.
+          </p>
+          <div class="about-values reveal-left delay-4">
+            <div class="value-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#89EA5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Αποτελεσματικότητα & Ισχύς
+            </div>
+            <div class="value-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#89EA5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Εμπιστοσύνη & Εγγύηση
+            </div>
+            <div class="value-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#89EA5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Υψηλή Ποιότητα Υπηρεσιών
+            </div>
+            <div class="value-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#89EA5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Τηλεφωνική Υποστήριξη 24/7
+            </div>
+          </div>
+        </div>
+        <div class="about-image-wrap reveal-right delay-2">
+          <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80"
+               alt="Φωτοβολταϊκά πάνελ"
+               class="about-img"
+               loading="lazy" />
+          <div class="about-img-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#89EA5F"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="#89EA5F" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Ανανεώσιμη Ενέργεια</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SERVICES ════ -->
+  <section id="services" class="services-section">
+    <div class="services-sticky-header">
+      <div class="container">
+        <div class="section-label text-center">Υπηρεσίες</div>
+        <h2 class="section-title text-center">Ολοκληρωμένες λύσεις ενέργειας</h2>
+      </div>
+    </div>
+
+    <!-- Service 1 — Μείωση Κόστους -->
+    <div class="service-scene" id="scene1">
+      <div class="scene-bg-img" style="background-image:url('https://deltaenergy.gr/wp-content/uploads/2024/03/service-6.jpg')"></div>
+      <div class="scene-bg-color sb1"></div>
+      <div class="scene-content">
+        <div class="scene-number">01</div>
+        <h3 class="scene-title">Μείωση Κόστους Ενέργειας</h3>
+        <p class="scene-text">
+          Η απελευθέρωση της αγοράς ενέργειας δίνει πλέον τη δυνατότητα σε κάθε καταναλωτή
+          να επιλέξει ανταγωνιστικές τιμές ηλεκτρικής ενέργειας. Αναλύουμε τη συνολική
+          ενεργειακή κατανάλωση και εντοπίζουμε με ακρίβεια τα σημεία σπατάλης,
+          επιτυγχάνοντας δραστική μείωση του λογαριασμού ρεύματος.
+        </p>
+        <ul class="scene-list">
+          <li>Ενεργειακός έλεγχος (audit)</li>
+          <li>Σχέδιο εξοικονόμησης ενέργειας</li>
+          <li>Εφαρμογή & παρακολούθηση αποτελεσμάτων</li>
+        </ul>
+        <button class="scene-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Ζητήστε μελέτη <span>→</span>
+        </button>
+      </div>
+      <div class="scene-deco"><div class="deco-ring dr1"></div><div class="deco-ring dr2"></div></div>
+    </div>
+
+    <!-- Service 2 — Διαχείριση Ενέργειας -->
+    <div class="service-scene" id="scene2">
+      <div class="scene-bg-img" style="background-image:url('https://deltaenergy.gr/wp-content/uploads/2024/03/service-5.jpg')"></div>
+      <div class="scene-bg-color sb2"></div>
+      <div class="scene-content">
+        <div class="scene-number">02</div>
+        <h3 class="scene-title">Διαχείριση Ενέργειας</h3>
+        <p class="scene-text">
+          Τα έξυπνα μετρητά (smart meters) παρέχουν δυνατότητες πραγματικού χρόνου
+          παρακολούθησης, ελέγχου και βελτιστοποίησης της χρήσης ενέργειας. Εγκαθιστούμε
+          σύγχρονα συστήματα που σας δίνουν πλήρη εικόνα κατανάλωσης και παραγωγής,
+          οποιαδήποτε στιγμή, από οποιαδήποτε συσκευή.
+        </p>
+        <ul class="scene-list">
+          <li>Smart metering & SCADA συστήματα</li>
+          <li>Αυτοματισμοί εξοικονόμησης ενέργειας</li>
+          <li>Αναφορές & analytics ενέργειας σε πραγματικό χρόνο</li>
+        </ul>
+        <button class="scene-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Μάθετε περισσότερα <span>→</span>
+        </button>
+      </div>
+      <div class="scene-deco"><div class="deco-ring dr1"></div><div class="deco-ring dr2"></div></div>
+    </div>
+
+    <!-- Service 3 — Φωτοβολταϊκά -->
+    <div class="service-scene" id="scene3">
+      <div class="scene-bg-img" style="background-image:url('intro/photo.png')"></div>
+      <div class="scene-bg-color sb3"></div>
+      <div class="scene-content">
+        <div class="scene-number">03</div>
+        <h3 class="scene-title">Φωτοβολταϊκά</h3>
+        <p class="scene-text">
+          Τα φωτοβολταϊκά αποτελούν τη μέθοδο που χρησιμοποιείται ευρέως για τη
+          μετατροπή της ηλιακής ακτινοβολίας σε ηλεκτρική ενέργεια. Σχεδιάζουμε
+          και εγκαθιστούμε συστήματα net metering, virtual net metering και αυτόνομα
+          συστήματα με αποθήκευση ενέργειας για οικίες, επιχειρήσεις και βιομηχανίες.
+        </p>
+        <ul class="scene-list">
+          <li>Μελέτη & αδειοδότηση</li>
+          <li>Εγκατάσταση & διασύνδεση δικτύου</li>
+          <li>Προληπτική & διορθωτική συντήρηση</li>
+        </ul>
+        <button class="scene-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Δωρεάν αξιολόγηση <span>→</span>
+        </button>
+      </div>
+      <div class="scene-deco"><div class="deco-ring dr1"></div><div class="deco-ring dr2"></div></div>
+    </div>
+
+    <!-- Service 4 — Ηλεκτροκίνηση -->
+    <div class="service-scene" id="scene4">
+      <div class="scene-bg-img" style="background-image:url('https://deltaenergy.gr/wp-content/uploads/2025/12/ilektrokini.jpg')"></div>
+      <div class="scene-bg-color sb4"></div>
+      <div class="scene-content">
+        <div class="scene-number">04</div>
+        <h3 class="scene-title">Ηλεκτροκίνηση</h3>
+        <p class="scene-text">
+          Σύμφωνα με τον Νόμο 4710/2020, αναλαμβάνουμε την εγκατάσταση σταθμών φόρτισης
+          ηλεκτρικών οχημάτων σε κατοικίες, επιχειρήσεις, parking και δημόσιους χώρους.
+          Επιλέγουμε την κατάλληλη λύση charging για κάθε ανάγκη και προϋπολογισμό.
+        </p>
+        <ul class="scene-list">
+          <li>Wallbox για οικιακή φόρτιση</li>
+          <li>Σταθμοί AC/DC για επιχειρήσεις & δημόσιους χώρους</li>
+          <li>Smart charging & load management</li>
+        </ul>
+        <button class="scene-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Αιτήστε προσφορά <span>→</span>
+        </button>
+      </div>
+      <div class="scene-deco"><div class="deco-ring dr1"></div><div class="deco-ring dr2"></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ WHY US ════ -->
+  <section id="why-us" class="whyus-section">
+    <div class="container">
+      <div class="section-label text-center reveal-up">Γιατί Delta Energy</div>
+      <h2 class="section-title text-center reveal-up delay-1">Επενδύετε στην ενέργεια·<br />εμείς σας επιστρέφουμε αποτελέσματα</h2>
+      <div class="whyus-grid">
+        <div class="why-card reveal-up delay-1">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M16 3 L19.5 11 L28 12 L22 18 L23.5 26 L16 22 L8.5 26 L10 18 L4 12 L12.5 11 Z" stroke="#89EA5F" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Εξατομικευμένη προσέγγιση</h4>
+          <p>Κάθε έργο ξεκινά με λεπτομερή ανάλυση των αναγκών σας. Δεν υπάρχει «τυπική» λύση.</p>
+        </div>
+        <div class="why-card reveal-up delay-2">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="#89EA5F" stroke-width="1.8"/><path d="M11 16 L14 19 L21 12" stroke="#89EA5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Πιστοποιημένοι επαγγελματίες</h4>
+          <p>Ομάδα πιστοποιημένων μηχανικών και τεχνικών με εκτεταμένη εμπειρία στον κλάδο.</p>
+        </div>
+        <div class="why-card reveal-up delay-3">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M16 4 L4 10 L4 18 C4 24 10 29 16 30 C22 29 28 24 28 18 L28 10 Z" stroke="#89EA5F" stroke-width="1.8" stroke-linejoin="round"/><path d="M11 16 L14 19 L21 12" stroke="#89EA5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Εγγυημένα αποτελέσματα</h4>
+          <p>Κάθε εγκατάσταση συνοδεύεται από εγγύηση απόδοσης και μακροπρόθεσμη συμφωνία συντήρησης.</p>
+        </div>
+        <div class="why-card reveal-up delay-4">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M6 16 Q6 8 16 6 Q26 8 26 16 Q26 24 16 26 Q6 24 6 16Z" stroke="#89EA5F" stroke-width="1.8"/><path d="M16 10 L16 16 L21 19" stroke="#89EA5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Άμεση ανταπόκριση</h4>
+          <p>Υποστήριξη 24/7 με εγγυημένους χρόνους αντίδρασης για κάθε έκτακτη ανάγκη.</p>
+        </div>
+        <div class="why-card reveal-up delay-5">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M8 6 L24 6 L28 12 L16 26 L4 12 Z" stroke="#89EA5F" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 12 L28 12 M12 6 L8 12 L16 26 M20 6 L24 12 L16 26" stroke="#89EA5F" stroke-width="1.2" opacity="0.5"/></svg>
+          </div>
+          <h4>Πανελλαδική παρουσία</h4>
+          <p>Δραστηριοποιούμαστε σε κάθε γωνιά της Ελλάδας — νησιά, ηπειρωτικά, αστικά κέντρα.</p>
+        </div>
+        <div class="why-card reveal-up delay-6">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" fill="#89EA5F" opacity="0.6"/><path d="M16 2v3M16 27v3M2 16h3M27 16h3M5.5 5.5l2.1 2.1M24.4 24.4l2.1 2.1M24.4 7.6l2.1-2.1M7.6 24.4l-2.1 2.1" stroke="#89EA5F" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/></svg>
+          </div>
+          <h4>Πράσινο μέλλον</h4>
+          <p>Κάθε εγκατάσταση μειώνει το CO₂ αποτύπωμα. Επενδύετε στο μέλλον σας και του πλανήτη.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ NEWS ════ -->
+  <section id="news" class="news-section">
+    <div class="container">
+      <div class="section-label text-center reveal-up">Ενημέρωση</div>
+      <h2 class="section-title text-center reveal-up delay-1">Τα Νέα μας</h2>
+      <p class="news-sub text-center reveal-up delay-2">
+        Τελευταίες εξελίξεις στον τομέα της ενέργειας στην Ελλάδα.
+      </p>
+      <div class="news-grid" id="newsGrid">
+        <!-- Skeleton placeholders while loading -->
+        <div class="news-skeleton"></div>
+        <div class="news-skeleton"></div>
+        <div class="news-skeleton"></div>
+        <div class="news-skeleton"></div>
+        <div class="news-skeleton"></div>
+        <div class="news-skeleton"></div>
+      </div>
+      <div class="news-error" id="newsError" style="display:none">
+        <p>Τα νέα δεν ήταν δυνατό να φορτωθούν αυτή τη στιγμή.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA BAND ════ -->
+  <section class="cta-band">
+    <div class="cta-bg-anim"></div>
+    <div class="cta-bg-img"></div>
+    <div class="container cta-inner">
+      <h2 class="cta-title reveal-up">Έτοιμοι να μειώσετε τον λογαριασμό σας;</h2>
+      <p class="cta-sub reveal-up delay-1">
+        Επικοινωνήστε μαζί μας για μια δωρεάν, χωρίς δέσμευση ενεργειακή αξιολόγηση.
+      </p>
+      <button class="btn-primary large reveal-up delay-2"
+              onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Ξεκινήστε τώρα
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ════ -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-label text-center reveal-up">Επικοινωνία</div>
+      <h2 class="section-title text-center reveal-up delay-1">Μιλήστε μαζί μας</h2>
+      <div class="contact-grid">
+
+        <!-- Info column -->
+        <div class="contact-info reveal-left delay-1">
+          <div class="contact-block">
+            <div class="contact-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z" stroke="#89EA5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Τηλέφωνο</div>
+              <a href="tel:+302109210702" class="contact-value">+30 210 921 0702</a>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#89EA5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke="#89EA5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:info@deltaenergy.gr" class="contact-value">info@deltaenergy.gr</a>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" stroke="#89EA5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="#89EA5F" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Διεύθυνση</div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Θριασίων+17+Άνω+Πετράλωνα+Αθήνα+Ελλάδα"
+                 target="_blank" rel="noopener" class="contact-value contact-map-link">
+                Θριασίων 17, Άνω Πετράλωνα, Αθήνα
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style="margin-left:4px;opacity:0.6"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <div class="social-label">Ακολουθήστε μας</div>
+            <div class="social-row">
+              <a href="https://www.facebook.com/p/Delta-Energy-61554186661328/"
+                 target="_blank" rel="noopener" class="social-link facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/deltaenergy__official/"
+                 target="_blank" rel="noopener" class="social-link instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.4A4 4 0 1112.6 8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.linkedin.com/company/deltaenergygr/"
+                 target="_blank" rel="noopener" class="social-link linkedin">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form column -->
+        <form class="contact-form reveal-right delay-2" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Όνομα <span class="req">*</span></label>
+              <input type="text" id="fname" name="fname" placeholder="Το όνομά σας" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Επώνυμο <span class="req">*</span></label>
+              <input type="text" id="lname" name="lname" placeholder="Το επώνυμό σας" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Τηλέφωνο</label>
+            <input type="tel" id="phone" name="phone" placeholder="+30 6XX XXX XXXX" />
+          </div>
+          <div class="form-group">
+            <label for="service">Ενδιαφέρον για</label>
+            <select id="service" name="service">
+              <option value="">Επιλέξτε υπηρεσία</option>
+              <option>Μείωση Κόστους Ενέργειας</option>
+              <option>Διαχείριση Ενέργειας</option>
+              <option>Φωτοβολταϊκά</option>
+              <option>Ηλεκτροκίνηση</option>
+              <option>Γενική πληροφόρηση</option>
+            </select>
+          </div>
+          <!-- Extra field: monthly bill -->
+          <div class="form-group">
+            <label for="monthly-bill">
+              Ο μέσος μηνιαίος λογαριασμός σας
+              <span class="optional-tag">Προαιρετικό</span>
+            </label>
+            <div class="input-prefix-wrap">
+              <span class="input-prefix">€</span>
+              <input type="number" id="monthly-bill" name="monthly_bill"
+                     placeholder="π.χ. 200" min="0" step="1" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Μήνυμα</label>
+            <textarea id="message" name="message" rows="4"
+                      placeholder="Περιγράψτε σύντομα την ανάγκη σας..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary full" id="submitBtn">
+            <span id="btnText">Αποστολή Μηνύματος</span>
+            <svg id="btnIcon" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-note">
+            <span class="req">*</span> Υποχρεωτικά πεδία · Απαντάμε εντός 24 ωρών · Δωρεάν αξιολόγηση χωρίς δέσμευση
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ════ -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="https://deltaenergy.gr/wp-content/uploads/2025/09/delta-logo.png"
+                 alt="Delta Energy" class="footer-logo-img"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="footer-logo-text" style="display:none">
+              <span class="logo-delta">Δ</span>DELTA<span class="logo-energy">ENERGY</span>
+            </div>
+          </div>
+          <p class="footer-tagline">Ενεργειακοί Σύμβουλοι<br />Μελέτη · Εγκατάσταση · Συντήρηση</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/p/Delta-Energy-61554186661328/"
+               target="_blank" rel="noopener" aria-label="Facebook" class="fsocial facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/deltaenergy__official/"
+               target="_blank" rel="noopener" aria-label="Instagram" class="fsocial instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.4A4 4 0 1112.6 8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/deltaenergygr/"
+               target="_blank" rel="noopener" aria-label="LinkedIn" class="fsocial linkedin">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Υπηρεσίες</h5>
+          <ul>
+            <li><a href="meiosi-kostous.html">Μείωση Κόστους Ενέργειας</a></li>
+            <li><a href="diacheirisi-energeias.html">Διαχείριση Ενέργειας</a></li>
+            <li><a href="fotovoltaika.html">Φωτοβολταϊκά</a></li>
+            <li><a href="ilektrokinisi.html">Ηλεκτροκίνηση</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Εταιρεία</h5>
+          <ul>
+            <li><a href="etaireia.html">Ποιοι είμαστε</a></li>
+            <li><a href="projects.html">Τα Project μας</a></li>
+            <li><a href="pistopoiiseis.html">Πιστοποιήσεις</a></li>
+            <li><a href="kariera.html">Καριέρα</a></li>
+            <li><a href="#news">Νέα</a></li>
+            <li><a href="chrisimoi-syndesmoi.html">Χρήσιμοι Σύνδεσμοι</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Επικοινωνία</h5>
+          <ul class="footer-contact-list">
+            <li><a href="tel:+302109210702">+30 210 921 0702</a></li>
+            <li><a href="mailto:info@deltaenergy.gr">info@deltaenergy.gr</a></li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=Θριασίων+17+Άνω+Πετράλωνα+Αθήνα+Ελλάδα"
+                 target="_blank" rel="noopener" class="footer-map-link">
+                Θριασίων 17, Άνω Πετράλωνα
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2025 Delta Energy. Όλα τα δικαιώματα διατηρούνται.</span>
+        <div class="footer-bottom-links">
+          <a href="legal.html" target="_blank">Όροι Χρήσης &amp; Πολιτική Απορρήτου</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════ CHATBOT ════ -->
+  <div id="chatbot-widget">
+    <button id="chat-toggle" aria-label="Ανοίξτε το chat">
+      <svg id="chat-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg id="chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" style="display:none">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="chat-badge" id="chatBadge">1</span>
+    </button>
+    <div id="chat-window">
+      <div class="chat-header">
+        <div class="chat-header-left">
+          <div class="chat-avatar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#89EA5F"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="#89EA5F" stroke-width="2" stroke-linecap="round" opacity=".6"/></svg>
+          </div>
+          <div>
+            <div class="chat-header-name">Delta Energy</div>
+            <div class="chat-header-status"><span class="status-dot"></span>Διαθέσιμοι τώρα</div>
+          </div>
+        </div>
+        <button class="chat-close-btn" onclick="toggleChat()" aria-label="Κλείσιμο">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-options" id="chatOptions"></div>
+      <div class="chat-input-row" id="chatInputRow" style="display:none">
+        <input type="text" id="chatInput" placeholder="Γράψτε εδώ…" autocomplete="off" />
+        <button id="chatSend">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="cursor-fx.js"></script>
+</body>
+</html>

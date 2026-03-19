@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Τα Project μας – Delta Energy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAV ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="https://deltaenergy.gr/wp-content/uploads/2025/09/delta-logo.png" alt="Delta Energy Logo" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <span class="nav-logo-fallback"><span class="logo-delta">Δ</span>DELTA<span class="logo-energy">ENERGY</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="etaireia.html">Εταιρεία</a></li>
+        <li class="has-dropdown">
+          <a href="ypiresies.html">Υπηρεσίες <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="meiosi-kostous.html">Μείωση Κόστους Ενέργειας</a></li>
+            <li><a href="diacheirisi-energeias.html">Διαχείριση Ενέργειας</a></li>
+            <li class="has-sub">
+              <a href="fotovoltaika.html">Φωτοβολταϊκά <svg class="nav-chevron-r" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <ul class="nav-sub"><li><a href="aytoparagogi.html">Αυτοπαραγωγή</a></li><li><a href="fotovoltaika-parka.html">Φωτοβολταϊκά Πάρκα</a></li></ul>
+            </li>
+            <li class="has-sub">
+              <a href="ilektrokinisi.html">Ηλεκτροκίνηση <svg class="nav-chevron-r" width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <ul class="nav-sub"><li><a href="ilektrokinisi-ofeli.html">Οφέλη Ηλεκτροκίνησης</a></li><li><a href="ilektrokinisi-fortistes.html">Φορτιστές</a></li></ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="projects.html" style="color:var(--green)">Τα Project μας</a></li>
+        <li><a href="index.html#news">Νέα</a></li>
+        <li><a href="index.html#contact">Επικοινωνία</a></li>
+      </ul>
+      <button class="nav-cta" onclick="window.location='index.html#contact'">Επικοινωνήστε μαζί μας</button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="etaireia.html" class="mm-link">Εταιρεία</a>
+      <a href="ypiresies.html" class="mm-link">Υπηρεσίες</a>
+      <a href="meiosi-kostous.html" class="mm-link mm-sub">↳ Μείωση Κόστους</a>
+      <a href="diacheirisi-energeias.html" class="mm-link mm-sub">↳ Διαχείριση Ενέργειας</a>
+      <a href="fotovoltaika.html" class="mm-link mm-sub">↳ Φωτοβολταϊκά</a>
+      <a href="ilektrokinisi.html" class="mm-link mm-sub">↳ Ηλεκτροκίνηση</a>
+      <a href="projects.html" class="mm-link">Τα Project μας</a>
+      <a href="index.html#news" class="mm-link">Νέα</a>
+      <a href="index.html#contact" class="mm-link">Επικοινωνία</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ PAGE HERO ═══ -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://deltaenergy.gr/wp-content/uploads/2025/09/american-public-power-association-XGAZzyLzn18-unsplash-2-1024x682-1.jpg')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-accent"></div>
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Αρχική</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Τα Project μας</span>
+      </div>
+      <h1 class="page-hero-title">Τα <span class="gradient-text">Project</span> μας</h1>
+      <p class="page-hero-sub">Υλοποιημένα έργα σε βιομηχανίες, ξενοδοχεία και επιχειρήσεις σε όλη την Ελλάδα.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ VIDEOS ═══ -->
+  <section class="inner-section">
+    <div class="container">
+      <div class="section-label">Βίντεο έργων</div>
+      <h2 class="section-title">Δείτε τα έργα μας<br /><span class="gradient-text">σε δράση</span></h2>
+      <p style="color:var(--text-muted);max-width:600px;margin-bottom:48px;line-height:1.8">Βίντεο παρουσίαση από εγκαταστάσεις φωτοβολταϊκών συστημάτων και ενεργειακών λύσεων της Delta Energy.</p>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+          <video controls preload="metadata" poster="">
+            <source src="media/Commercial Delicious Panels.mp4" type="video/mp4" />
+            Ο browser σας δεν υποστηρίζει αναπαραγωγή βίντεο.
+          </video>
+          <div class="video-card-info">
+            <h4>Delicious Hellenic Qsine – Φωτοβολταϊκά Πάνελ</h4>
+            <p>Εγκατάσταση φωτοβολταϊκού συστήματος στις εγκαταστάσεις της εταιρείας.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls preload="metadata" poster="">
+            <source src="media/Commercial Faso Plast Panels 2.mp4" type="video/mp4" />
+            Ο browser σας δεν υποστηρίζει αναπαραγωγή βίντεο.
+          </video>
+          <div class="video-card-info">
+            <h4>FASOPLAST – Φωτοβολταϊκά Πάνελ</h4>
+            <p>Βιομηχανική εγκατάσταση φωτοβολταϊκών πάνελ μεγάλης κλίμακας.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls preload="metadata" poster="">
+            <source src="media/Interprofil.mp4" type="video/mp4" />
+            Ο browser σας δεν υποστηρίζει αναπαραγωγή βίντεο.
+          </video>
+          <div class="video-card-info">
+            <h4>ΙΝΤΕΡΠΡΟΦΙΛ – Ενεργειακή Αναβάθμιση</h4>
+            <p>Ολοκληρωμένη ενεργειακή αναβάθμιση βιομηχανικής εγκατάστασης.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls preload="metadata" poster="">
+            <source src="media/ΣΥΝΤΗΡΗΣΗ 2.mp4" type="video/mp4" />
+            Ο browser σας δεν υποστηρίζει αναπαραγωγή βίντεο.
+          </video>
+          <div class="video-card-info">
+            <h4>Συντήρηση Φωτοβολταϊκών Συστημάτων</h4>
+            <p>Τακτική συντήρηση και έλεγχος απόδοσης εγκατεστημένων συστημάτων.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROJECT LIST ═══ -->
+  <section class="inner-section alt-bg">
+    <div class="container">
+      <div class="section-label">Πελατολόγιο</div>
+      <h2 class="section-title">Ολοκληρωμένα <span class="gradient-text">έργα</span></h2>
+      <p style="color:var(--text-muted);max-width:600px;margin-bottom:48px;line-height:1.8">Επιλεγμένα έργα που έχουμε υλοποιήσει σε βιομηχανίες, ξενοδοχεία και εμπορικές επιχειρήσεις σε όλη την Ελλάδα.</p>
+
+      <!-- Βιομηχανία -->
+      <h3 class="video-section-title">Βιομηχανία</h3>
+      <div class="projects-list-grid" style="margin-bottom:48px">
+        <div class="project-list-card"><div class="project-list-num">01</div><div class="project-list-info"><h5>FASOPLAST</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">02</div><div class="project-list-info"><h5>ΜΑΡΜΥΚ-ΗΛΙΟΠΟΥΛΟΣ Α.Ε.</h5><span>Εξοικονόμηση Ενέργειας</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">03</div><div class="project-list-info"><h5>ΒΟΓΙΑΤΖΗΣ</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">04</div><div class="project-list-info"><h5>MENNE AE</h5><span>Διαχείριση Ενέργειας</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">05</div><div class="project-list-info"><h5>PREPAC S.A.</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">06</div><div class="project-list-info"><h5>OPTIMAL SUPPLY CHAIN S.A.</h5><span>Εξοικονόμηση Ενέργειας</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">07</div><div class="project-list-info"><h5>ΙΝΤΕΡΠΡΟΦΙΛ Ε.Π.Ε.</h5><span>Ενεργειακή Αναβάθμιση</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">08</div><div class="project-list-info"><h5>BERLING A.B.E.E.</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">09</div><div class="project-list-info"><h5>ΚΑΛΑΣ Α.Ε. – ΑΥΛΩΝΑΣ</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">10</div><div class="project-list-info"><h5>ΚΑΛΑΣ Α.Ε. – ΝΕΑ ΕΦΕΣΟΣ</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">11</div><div class="project-list-info"><h5>ΚΑΛΑΣ Α.Ε. – ΒΙ.ΠΕ. ΣΙΝΔΟΥ</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">12</div><div class="project-list-info"><h5>ASFALTER S.A.</h5><span>Εξοικονόμηση Ενέργειας</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">13</div><div class="project-list-info"><h5>IBS S.A.</h5><span>Διαχείριση Ενέργειας</span></div></div>
+      </div>
+
+      <!-- Ξενοδοχεία -->
+      <h3 class="video-section-title">Ξενοδοχεία &amp; Τουρισμός</h3>
+      <div class="projects-list-grid" style="margin-bottom:48px">
+        <div class="project-list-card"><div class="project-list-num">01</div><div class="project-list-info"><h5>ΞΕΝΟΔΟΧΕΙΟ ΗΡΑΚΛΕΙΟ ΚΡΗΤΗΣ</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">02</div><div class="project-list-info"><h5>KOLYMBIA BEACH</h5><span>Ενεργειακή Αναβάθμιση</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">03</div><div class="project-list-info"><h5>DREAMS RESORT</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">04</div><div class="project-list-info"><h5>IMPERIAL RESORT</h5><span>Εξοικονόμηση Ενέργειας</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">05</div><div class="project-list-info"><h5>AEGEAN BLUE HOTEL</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">06</div><div class="project-list-info"><h5>AEGEAN PARK HOTEL</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">07</div><div class="project-list-info"><h5>HOLIDAY VILLAGE</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">08</div><div class="project-list-info"><h5>HOLIDAY VILLAGE PATILIS</h5><span>Εξοικονόμηση Ενέργειας</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">09</div><div class="project-list-info"><h5>BEACH RESORT</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">10</div><div class="project-list-info"><h5>TROPICAL SUITES</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">11</div><div class="project-list-info"><h5>BEACH SUITES</h5><span>Ενεργειακή Αναβάθμιση</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">12</div><div class="project-list-info"><h5>BELVEDERE</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">13</div><div class="project-list-info"><h5>PRINCESS HOTEL</h5><span>Εξοικονόμηση Ενέργειας</span></div></div>
+      </div>
+
+      <!-- Λοιπά -->
+      <h3 class="video-section-title">Λοιπά</h3>
+      <div class="projects-list-grid">
+        <div class="project-list-card"><div class="project-list-num">01</div><div class="project-list-info"><h5>BYRON COLLEGE</h5><span>Εξοικονόμηση Ενέργειας</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">02</div><div class="project-list-info"><h5>DELICIOUS HELLENIC QSINE</h5><span>Φωτοβολταϊκό Σύστημα</span></div></div>
+        <div class="project-list-card"><div class="project-list-num">03</div><div class="project-list-info"><h5>HQ</h5><span>Διαχείριση Ενέργειας</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PROJECTS PHOTO GRID ============== -->
+  <section class="inner-section">
+    <div class="container">
+      <div class="section-label">Φωτογραφίες έργων</div>
+      <h2 class="section-title">Τα <span class="gradient-text">project</span> μας</h2>
+      <div class="projects-grid-v2">
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/FASOPLAST1.png" alt="FASOPLAST" loading="lazy" /></div><div class="pcv2-name">FASOPLAST</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/Marmykedited.jpg" alt="ΜΑΡΜΥΚ-ΗΛΙΟΠΟΥΛΟΣ Α.Ε." loading="lazy" /></div><div class="pcv2-name">ΜΑΡΜΥΚ-ΗΛΙΟΠΟΥΛΟΣ Α.Ε.</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/BOGIATZISedited.jpg" alt="ΒΟΓΙΑΤΖΗΣ" loading="lazy" /></div><div class="pcv2-name">ΒΟΓΙΑΤΖΗΣ</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2024/03/EMFI-AE1-1.jpg" alt="MENNE AE" loading="lazy" /></div><div class="pcv2-name">MENNE AE</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/PREPAC-SA-edited.jpg" alt="PREPAC S.A." loading="lazy" /></div><div class="pcv2-name">PREPAC S.A.</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/OPTIMAL-SUPPLY-CHAIN-SA.jpg" alt="OPTIMAL SUPPLY CHAIN S.A." loading="lazy" /></div><div class="pcv2-name">OPTIMAL SUPPLY CHAIN S.A.</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/INTERPROFIL1new.jpg" alt="ΙΝΤΕΡΠΡΟΦΙΛ" loading="lazy" /></div><div class="pcv2-name">ΙΝΤΕΡΠΡΟΦΙΛ</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/BERLING3.jpg" alt="BERLING A.B.E.E." loading="lazy" /></div><div class="pcv2-name">BERLING A.B.E.E.</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/KalasSAAulonas.jpg" alt="ΚΑΛΑΣ Α.Ε. ΑΥΛΩΝΑΣ" loading="lazy" /></div><div class="pcv2-name">ΚΑΛΑΣ Α.Ε. ΑΥΛΩΝΑΣ</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/8KalasSA-NeaEfesos.jpg" alt="ΚΑΛΑΣ Α.Ε. ΝΕΑ ΕΦΕΣΟΣ" loading="lazy" /></div><div class="pcv2-name">ΚΑΛΑΣ Α.Ε. ΝΕΑ ΕΦΕΣΟΣ</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/IMG-660fea5c3918e4b368a2518598999be0-V.jpg" alt="ΚΑΛΑΣ Α.Ε. ΣΙΝΔΟΥ" loading="lazy" /></div><div class="pcv2-name">ΚΑΛΑΣ Α.Ε. ΣΙΝΔΟΥ</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/IBS-SA4.jpg" alt="IBS S.A." loading="lazy" /></div><div class="pcv2-name">IBS S.A.</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/Asfalter1.jpg" alt="ASFALTER S.A." loading="lazy" /></div><div class="pcv2-name">ASFALTER S.A.</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/02/ByronCollegePV1.jpg" alt="BYRON COLLEGE" loading="lazy" /></div><div class="pcv2-name">BYRON COLLEGE</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/calderapalaceedited.jpg" alt="ΞΕΝΟΔΟΧΕΙΟ ΗΡΑΚΛΕΙΟ ΚΡΗΤΗΣ" loading="lazy" /></div><div class="pcv2-name">ΞΕΝΟΔΟΧΕΙΟ ΗΡΑΚΛΕΙΟ ΚΡΗΤΗΣ</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/KOLYMBIA1.jpg" alt="KOLYMBIA BEACH" loading="lazy" /></div><div class="pcv2-name">KOLYMBIA BEACH</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/DREAMS-RESORT1.jpg" alt="DREAMS RESORT" loading="lazy" /></div><div class="pcv2-name">DREAMS RESORT</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/IMPERIAL1.jpg" alt="IMPERIAL RESORT" loading="lazy" /></div><div class="pcv2-name">IMPERIAL RESORT</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/DELICIOUS2.jpg" alt="DELICIOUS HELLENIC QSINE" loading="lazy" /></div><div class="pcv2-name">DELICIOUS HELLENIC QSINE</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/Aegean-Blue-1.jpg" alt="AEGEAN BLUE HOTEL" loading="lazy" /></div><div class="pcv2-name">AEGEAN BLUE HOTEL</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/Aegean-Park-edited.jpg" alt="AEGEAN PARK HOTEL" loading="lazy" /></div><div class="pcv2-name">AEGEAN PARK HOTEL</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/IMG_9572.jpg" alt="HOLIDAY VILLAGE" loading="lazy" /></div><div class="pcv2-name">HOLIDAY VILLAGE</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/IMG_20230220_085910.jpg" alt="HOLIDAY VILLAGE PATILIS" loading="lazy" /></div><div class="pcv2-name">HOLIDAY VILLAGE PATILIS</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/Γραφεια-Atlantica1.jpg" alt="HQ" loading="lazy" /></div><div class="pcv2-name">HQ</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/IMG_0837.jpg" alt="BEACH RESORT" loading="lazy" /></div><div class="pcv2-name">BEACH RESORT</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/TROPICAL1.jpg" alt="TROPICAL SUITES" loading="lazy" /></div><div class="pcv2-name">TROPICAL SUITES</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/BEACH_SUITES1.jpg" alt="BEACH SUITES" loading="lazy" /></div><div class="pcv2-name">BEACH SUITES</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/Belvedere1.jpg" alt="BELVEDERE" loading="lazy" /></div><div class="pcv2-name">BELVEDERE</div></div>
+        <div class="project-card-v2"><div class="pcv2-img"><img src="https://deltaenergy.gr/wp-content/uploads/2026/01/1.jpg" alt="PRINCESS HOTEL" loading="lazy" /></div><div class="pcv2-name">PRINCESS HOTEL</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA ═══ -->
+  <section class="inner-section" style="text-align:center">
+    <div class="container">
+      <h2 class="section-title text-center">Θέλετε να γίνετε<br /><span class="gradient-text">το επόμενο success story;</span></h2>
+      <p style="color:var(--text-muted);max-width:520px;margin:0 auto 32px;line-height:1.8">Επικοινωνήστε μαζί μας για δωρεάν αξιολόγηση και ανακαλύψτε πόσο μπορείτε να εξοικονομήσετε.</p>
+      <a href="index.html#contact" class="btn-primary">Ξεκινήστε τώρα</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ════ -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="https://deltaenergy.gr/wp-content/uploads/2025/09/delta-logo.png" alt="Delta Energy" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="footer-logo-text" style="display:none"><span class="logo-delta">Δ</span>DELTA<span class="logo-energy">ENERGY</span></div>
+          </div>
+          <p class="footer-tagline">Ενεργειακοί Σύμβουλοι<br />Μελέτη · Εγκατάσταση · Συντήρηση</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/p/Delta-Energy-61554186661328/" target="_blank" rel="noopener" aria-label="Facebook" class="fsocial facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="https://www.instagram.com/deltaenergy__official/" target="_blank" rel="noopener" aria-label="Instagram" class="fsocial instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.4A4 4 0 1112.6 8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.linkedin.com/company/deltaenergygr/" target="_blank" rel="noopener" aria-label="LinkedIn" class="fsocial linkedin"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Υπηρεσίες</h5><ul><li><a href="meiosi-kostous.html">Μείωση Κόστους Ενέργειας</a></li><li><a href="diacheirisi-energeias.html">Διαχείριση Ενέργειας</a></li><li><a href="fotovoltaika.html">Φωτοβολταϊκά</a></li><li><a href="ilektrokinisi.html">Ηλεκτροκίνηση</a></li></ul></div>
+        <div class="footer-col"><h5>Εταιρεία</h5><ul><li><a href="etaireia.html">Ποιοι είμαστε</a></li><li><a href="projects.html">Τα Project μας</a></li><li><a href="pistopoiiseis.html">Πιστοποιήσεις</a></li><li><a href="kariera.html">Καριέρα</a></li><li><a href="index.html#news">Νέα</a></li><li><a href="chrisimoi-syndesmoi.html">Χρήσιμοι Σύνδεσμοι</a></li></ul></div>
+        <div class="footer-col"><h5>Επικοινωνία</h5><ul class="footer-contact-list"><li><a href="tel:+302109210702">+30 210 921 0702</a></li><li><a href="mailto:info@deltaenergy.gr">info@deltaenergy.gr</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Θριασίων+17+Άνω+Πετράλωνα+Αθήνα+Ελλάδα" target="_blank" rel="noopener" class="footer-map-link">Θριασίων 17, Άνω Πετράλωνα</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2025 Delta Energy. Όλα τα δικαιώματα διατηρούνται.</span><div class="footer-bottom-links"><a href="legal.html" target="_blank">Όροι Χρήσης &amp; Πολιτική Απορρήτου</a></div></div></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="cursor-fx.js"></script>
+</body>
+</html>

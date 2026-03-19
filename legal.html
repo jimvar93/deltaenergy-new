@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Όροι Χρήσης & Πολιτική Απορρήτου – Delta Energy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green:    #89EA5F;
+      --bg:       #070d0a;
+      --bg2:      #0c1510;
+      --surface:  #111e13;
+      --border:   rgba(137,234,95,0.12);
+      --text:     #e8f5e0;
+      --muted:    #7a9b72;
+      --dim:      #4a6644;
+      --white:    #ffffff;
+      --font:     'Inter', system-ui, sans-serif;
+      --radius:   12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-thumb { background: #5DC832; border-radius: 3px; }
+
+    /* ── Top bar ── */
+    .topbar {
+      background: rgba(7,13,10,0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex; align-items: center; gap: 20px;
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(16px);
+    }
+    .topbar-logo {
+      display: flex; align-items: center;
+      text-decoration: none;
+    }
+    .topbar-logo img {
+      height: 38px;
+      width: auto;
+      display: block;
+    }
+    .topbar-back {
+      margin-left: auto;
+      display: inline-flex; align-items: center; gap: 7px;
+      text-decoration: none; color: var(--muted);
+      font-size: 0.83rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .topbar-back:hover { color: var(--green); }
+
+    /* ── Hero ── */
+    .legal-hero {
+      padding: 72px 24px 56px;
+      text-align: center;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(137,234,95,0.06) 0%, transparent 70%),
+                  var(--bg2);
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-hero h1 {
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 900; color: var(--white);
+      letter-spacing: -0.02em; margin-bottom: 12px;
+    }
+    .legal-hero p { color: var(--muted); font-size: 0.9rem; }
+    .legal-hero .green-accent { color: var(--green); }
+
+    /* ── Main content ── */
+    .legal-content {
+      max-width: 820px; margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px; margin-bottom: 56px;
+    }
+    .toc-title {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--dim); margin-bottom: 16px;
+    }
+    .toc ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .toc ul li a {
+      text-decoration: none; color: var(--muted); font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .toc ul li a:hover { color: var(--green); }
+
+    /* ── Sections ── */
+    .legal-section { margin-bottom: 56px; }
+    .legal-section-title {
+      font-size: 1.4rem; font-weight: 800;
+      color: var(--white); letter-spacing: -0.01em;
+      margin-bottom: 24px; padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .legal-section-title .num {
+      color: var(--green); font-size: 0.9rem;
+      font-weight: 600; min-width: 24px;
+    }
+
+    h2.article-heading {
+      font-size: 1rem; font-weight: 700;
+      color: var(--white); margin: 28px 0 10px;
+    }
+
+    p { color: var(--muted); margin-bottom: 16px; font-size: 0.93rem; }
+    ul.legal-list {
+      list-style: none; display: flex; flex-direction: column;
+      gap: 7px; margin-bottom: 16px; padding-left: 4px;
+    }
+    ul.legal-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      color: var(--muted); font-size: 0.91rem; line-height: 1.6;
+    }
+    ul.legal-list li::before {
+      content: ''; width: 5px; height: 5px;
+      background: var(--green); border-radius: 50%;
+      flex-shrink: 0; margin-top: 8px;
+    }
+
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px; margin: 16px 0;
+      font-size: 0.88rem; color: var(--muted);
+      line-height: 1.8;
+    }
+    .contact-box strong { color: var(--white); }
+    .contact-box a { color: var(--green); text-decoration: none; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    .placeholder { color: var(--green); font-style: italic; }
+
+    /* ── Divider ── */
+    .legal-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 56px 0;
+    }
+
+    /* ── Footer ── */
+    .legal-footer {
+      text-align: center; padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem; color: var(--dim);
+    }
+    .legal-footer a { color: var(--muted); text-decoration: none; }
+    .legal-footer a:hover { color: var(--green); }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <a href="index.html" class="topbar-logo">
+      <img src="https://deltaenergy.gr/wp-content/uploads/2025/09/delta-logo.png" alt="Delta Energy" />
+    </a>
+    <a href="index.html" class="topbar-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Επιστροφή στην αρχική
+    </a>
+  </div>
+
+  <!-- Hero -->
+  <div class="legal-hero">
+    <h1>Όροι Χρήσης &amp; <span class="green-accent">Πολιτική Απορρήτου</span></h1>
+    <p>Τελευταία ενημέρωση: Ιανουάριος 2025 &nbsp;·&nbsp; DELTAENERGY – Ενεργειακοί Σύμβουλοι</p>
+  </div>
+
+  <!-- Content -->
+  <div class="legal-content">
+
+    <!-- TOC -->
+    <div class="toc">
+      <div class="toc-title">Περιεχόμενα</div>
+      <ul>
+        <li><a href="#terms">Α. Όροι Χρήσης</a></li>
+        <li><a href="#t1">&nbsp;&nbsp;1. Περιεχόμενο ιστοσελίδας – Αστική ευθύνη</a></li>
+        <li><a href="#t2">&nbsp;&nbsp;2. Πνευματικά δικαιώματα</a></li>
+        <li><a href="#t3">&nbsp;&nbsp;3. Υποχρεώσεις χρήστη</a></li>
+        <li><a href="#t4">&nbsp;&nbsp;4. Σύνδεσμοι προς τρίτους</a></li>
+        <li><a href="#t5">&nbsp;&nbsp;5. Τροποποίηση περιεχομένου και όρων</a></li>
+        <li><a href="#t6">&nbsp;&nbsp;6. Εφαρμοστέο δίκαιο</a></li>
+        <li><a href="#privacy">Β. Πολιτική Απορρήτου &amp; Προστασίας Δεδομένων</a></li>
+        <li><a href="#p1">&nbsp;&nbsp;1. Υπεύθυνος επεξεργασίας</a></li>
+        <li><a href="#p2">&nbsp;&nbsp;2. Ποια δεδομένα συλλέγουμε</a></li>
+        <li><a href="#p3">&nbsp;&nbsp;3. Σκοποί επεξεργασίας</a></li>
+        <li><a href="#p4">&nbsp;&nbsp;4. Νομική βάση επεξεργασίας</a></li>
+        <li><a href="#p5">&nbsp;&nbsp;5. Αποδέκτες δεδομένων</a></li>
+        <li><a href="#p6">&nbsp;&nbsp;6. Χρόνος διατήρησης</a></li>
+        <li><a href="#p7">&nbsp;&nbsp;7. Ασφάλεια δεδομένων</a></li>
+        <li><a href="#p8">&nbsp;&nbsp;8. Δικαιώματα υποκειμένων</a></li>
+        <li><a href="#p9">&nbsp;&nbsp;9. Πολιτική Cookies</a></li>
+        <li><a href="#p10">&nbsp;&nbsp;10. Σύνδεσμοι κοινωνικών δικτύων</a></li>
+        <li><a href="#p11">&nbsp;&nbsp;11. Τροποποιήσεις</a></li>
+        <li><a href="#p12">&nbsp;&nbsp;12. Επικοινωνία</a></li>
+      </ul>
+    </div>
+
+    <!-- ══ TERMS ══ -->
+    <div id="terms" class="legal-section">
+      <div class="legal-section-title">
+        <span class="num">Α.</span> Όροι Χρήσης
+      </div>
+      <p>
+        Η χρήση της ιστοσελίδας <strong>www.deltaenergy.gr</strong> προϋποθέτει την ανεπιφύλακτη αποδοχή των παρόντων όρων.
+        Η ιστοσελίδα αφορά την παρουσίαση της DELTAENERGY, των υπηρεσιών της στον τομέα της ενέργειας και των τρόπων επικοινωνίας με την εταιρεία.
+        Στο site προβάλλονται υπηρεσίες σχετικές με τη μείωση κόστους ενέργειας, τη διαχείριση ενέργειας, τα φωτοβολταϊκά και την ηλεκτροκίνηση, καθώς και στοιχεία επικοινωνίας της εταιρείας.
+      </p>
+    </div>
+
+    <div id="t1" class="legal-section">
+      <div class="legal-section-title"><span class="num">1.</span> Περιεχόμενο ιστοσελίδας – Αστική ευθύνη</div>
+      <p>
+        Το περιεχόμενο της ιστοσελίδας παρέχεται αποκλειστικά για γενική ενημέρωση. Παρότι καταβάλλεται κάθε εύλογη προσπάθεια ώστε οι πληροφορίες να είναι ακριβείς, πλήρεις και επίκαιρες, η DELTAENERGY δεν εγγυάται ότι το περιεχόμενο είναι πάντοτε απαλλαγμένο από σφάλματα, παραλείψεις ή ανακρίβειες.
+      </p>
+      <p>
+        Η DELTAENERGY δεν ευθύνεται για οποιαδήποτε άμεση ή έμμεση ζημία, θετική ή αποθετική, που τυχόν προκύψει από τη χρήση της ιστοσελίδας ή από την εμπιστοσύνη σε πληροφορίες που περιέχονται σε αυτή. Οι πληροφορίες που παρέχονται μέσω της ιστοσελίδας δεν συνιστούν εξατομικευμένη τεχνική, οικονομική, επενδυτική ή νομική συμβουλή, ούτε υποκαθιστούν ειδική επαγγελματική αξιολόγηση.
+      </p>
+    </div>
+
+    <div id="t2" class="legal-section">
+      <div class="legal-section-title"><span class="num">2.</span> Πνευματικά δικαιώματα</div>
+      <p>
+        Όλο το περιεχόμενο της ιστοσελίδας, συμπεριλαμβανομένων ενδεικτικά κειμένων, φωτογραφιών, γραφικών, λογοτύπων, διακριτικών γνωρισμάτων, αρχείων, σχεδίων και γενικά κάθε στοιχείου που αναρτάται στην ιστοσελίδα, αποτελεί πνευματική και βιομηχανική ιδιοκτησία της DELTAENERGY ή/και των εκάστοτε δικαιούχων του και προστατεύεται από την ισχύουσα ελληνική, ενωσιακή και διεθνή νομοθεσία.
+      </p>
+      <p>
+        Απαγορεύεται η ολική ή μερική αναπαραγωγή, αντιγραφή, αποθήκευση, διανομή, τροποποίηση, δημοσίευση, μετάδοση ή καθ' οιονδήποτε τρόπο εκμετάλλευση του περιεχομένου χωρίς προηγούμενη έγγραφη άδεια της DELTAENERGY, εκτός αν επιτρέπεται ρητά από τον νόμο. Επιτρέπεται μόνο η προσωπική και μη εμπορική χρήση του περιεχομένου.
+      </p>
+    </div>
+
+    <div id="t3" class="legal-section">
+      <div class="legal-section-title"><span class="num">3.</span> Υποχρεώσεις χρήστη</div>
+      <p>
+        Ο χρήστης της ιστοσελίδας οφείλει να χρησιμοποιεί την ιστοσελίδα νόμιμα, καλόπιστα και σύμφωνα με τα χρηστά ήθη. Ο χρήστης δεν επιτρέπεται να χρησιμοποιεί την ιστοσελίδα κατά τρόπο που μπορεί να προκαλέσει βλάβη, δυσλειτουργία, υπερφόρτωση ή παραβίαση της ασφάλειάς της, ούτε να εισάγει κακόβουλο λογισμικό ή να επιχειρεί μη εξουσιοδοτημένη πρόσβαση σε δεδομένα, συστήματα ή υποδομές της.
+      </p>
+    </div>
+
+    <div id="t4" class="legal-section">
+      <div class="legal-section-title"><span class="num">4.</span> Σύνδεσμοι προς τρίτους</div>
+      <p>
+        Η ιστοσελίδα ενδέχεται να περιλαμβάνει συνδέσμους προς ιστοσελίδες τρίτων. Οι σύνδεσμοι αυτοί παρέχονται αποκλειστικά για τη διευκόλυνση των χρηστών. Η DELTAENERGY δεν ελέγχει το περιεχόμενο, τη διαθεσιμότητα, την πολιτική απορρήτου ή την ασφάλεια των ιστοσελίδων αυτών και δεν φέρει ευθύνη για οποιαδήποτε ζημία ή απώλεια τυχόν προκύψει από τη χρήση τους.
+      </p>
+    </div>
+
+    <div id="t5" class="legal-section">
+      <div class="legal-section-title"><span class="num">5.</span> Τροποποίηση περιεχομένου και όρων</div>
+      <p>
+        Η DELTAENERGY διατηρεί το δικαίωμα να τροποποιεί, να ανανεώνει ή να αποσύρει, οποτεδήποτε και χωρίς προηγούμενη ειδοποίηση, μέρος ή το σύνολο της ιστοσελίδας, του περιεχομένου της και των παρόντων όρων. Οι χρήστες οφείλουν να ελέγχουν περιοδικά την παρούσα σελίδα για τυχόν αλλαγές.
+      </p>
+    </div>
+
+    <div id="t6" class="legal-section">
+      <div class="legal-section-title"><span class="num">6.</span> Εφαρμοστέο δίκαιο</div>
+      <p>
+        Οι παρόντες όροι διέπονται από το ελληνικό και το ενωσιακό δίκαιο. Για κάθε διαφορά που τυχόν προκύψει σε σχέση με τη χρήση της ιστοσελίδας, αρμόδια ορίζονται τα δικαστήρια των Αθηνών, εκτός αν ορίζεται διαφορετικά από αναγκαστικό νόμο.
+      </p>
+    </div>
+
+    <hr class="legal-divider" />
+
+    <!-- ══ PRIVACY ══ -->
+    <div id="privacy" class="legal-section">
+      <div class="legal-section-title">
+        <span class="num">Β.</span> Πολιτική Απορρήτου &amp; Προστασίας Προσωπικών Δεδομένων
+      </div>
+      <p>
+        Η DELTAENERGY σέβεται και προστατεύει τα προσωπικά δεδομένα των επισκεπτών και πελατών της. Η επεξεργασία των προσωπικών δεδομένων πραγματοποιείται σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (Κανονισμός (ΕΕ) 2016/679 – GDPR), την ισχύουσα ελληνική νομοθεσία και τις αρχές νομιμότητας, διαφάνειας, ελαχιστοποίησης, ακρίβειας και ασφάλειας.
+      </p>
+    </div>
+
+    <div id="p1" class="legal-section">
+      <div class="legal-section-title"><span class="num">1.</span> Υπεύθυνος επεξεργασίας</div>
+      <p>Υπεύθυνος επεξεργασίας των προσωπικών δεδομένων που συλλέγονται μέσω της ιστοσελίδας είναι η:</p>
+      <div class="contact-box">
+        <strong><span class="placeholder">[ΠΛΗΡΗΣ ΝΟΜΙΚΗ ΕΠΩΝΥΜΙΑ ΕΤΑΙΡΕΙΑΣ]</span></strong><br>
+        Διακριτικός τίτλος: <strong>DELTAENERGY</strong><br>
+        Διεύθυνση: Θριασίων 17, Άνω Πετράλωνα<br>
+        Τηλέφωνο: <a href="tel:+302109210702">+30 21 0921 0702</a><br>
+        Email: <a href="mailto:info@deltaenergy.gr">info@deltaenergy.gr</a><br><br>
+        ΑΦΜ: <span class="placeholder">[ΣΥΜΠΛΗΡΩΣΤΕ]</span><br>
+        Γ.Ε.ΜΗ.: <span class="placeholder">[ΣΥΜΠΛΗΡΩΣΤΕ]</span><br>
+        Υπεύθυνος επικοινωνίας για θέματα προσωπικών δεδομένων: <span class="placeholder">[ΣΥΜΠΛΗΡΩΣΤΕ, αν υπάρχει]</span>
+      </div>
+    </div>
+
+    <div id="p2" class="legal-section">
+      <div class="legal-section-title"><span class="num">2.</span> Ποια δεδομένα ενδέχεται να συλλέγουμε</div>
+      <p>
+        Κατά την απλή περιήγηση στην ιστοσελίδα, μπορείτε να ενημερώνεστε για τις υπηρεσίες μας χωρίς να μας παρέχετε απευθείας προσωπικά στοιχεία. Ωστόσο, προσωπικά δεδομένα ενδέχεται να συλλέγονται όταν συμπληρώνετε τη φόρμα επικοινωνίας ή τη φόρμα υπολογισμού εξοικονόμησης ενέργειας, καθώς και όταν επιλέγετε να επικοινωνήσετε μαζί μας μέσω email ή τηλεφώνου.
+      </p>
+      <p>Τα δεδομένα που ενδέχεται να συλλέγουμε περιλαμβάνουν, ενδεικτικά:</p>
+      <ul class="legal-list">
+        <li>ονοματεπώνυμο</li>
+        <li>διεύθυνση email</li>
+        <li>αριθμό τηλεφώνου</li>
+        <li>στοιχεία ακινήτου ή επιχείρησης που σχετίζονται με το αίτημά σας</li>
+        <li>τύπο ακινήτου ή άλλο στοιχείο που εισάγετε στη φόρμα</li>
+        <li>το περιεχόμενο του μηνύματός σας</li>
+        <li>κάθε άλλο στοιχείο που επιλέγετε οικειοθελώς να μας αποστείλετε</li>
+      </ul>
+    </div>
+
+    <div id="p3" class="legal-section">
+      <div class="legal-section-title"><span class="num">3.</span> Σκοποί επεξεργασίας</div>
+      <p>Τα προσωπικά σας δεδομένα χρησιμοποιούνται αποκλειστικά για νόμιμους, συγκεκριμένους και σαφείς σκοπούς, όπως:</p>
+      <ul class="legal-list">
+        <li>για να απαντήσουμε σε αιτήματα επικοινωνίας ή ενημέρωσης</li>
+        <li>για να αξιολογήσουμε το αίτημά σας σχετικά με υπηρεσίες ενέργειας, εξοικονόμησης, φωτοβολταϊκών ή λοιπών ενεργειακών λύσεων</li>
+        <li>για την παροχή προσφοράς, τεχνικής ενημέρωσης ή προκαταρκτικής συμβουλευτικής</li>
+        <li>για τη βελτίωση της λειτουργίας, της ασφάλειας και της εμπειρίας χρήστη της ιστοσελίδας</li>
+        <li>για τη συμμόρφωση με έννομες υποχρεώσεις της εταιρείας</li>
+        <li>για τη θεμελίωση, άσκηση ή υποστήριξη νομικών αξιώσεων, όπου απαιτείται</li>
+      </ul>
+    </div>
+
+    <div id="p4" class="legal-section">
+      <div class="legal-section-title"><span class="num">4.</span> Νομική βάση επεξεργασίας</div>
+      <p>Η επεξεργασία των δεδομένων σας βασίζεται, κατά περίπτωση:</p>
+      <ul class="legal-list">
+        <li>στη συγκατάθεσή σας, όταν αυτή απαιτείται</li>
+        <li>στη λήψη μέτρων κατόπιν αιτήματός σας πριν από πιθανή σύναψη σύμβασης</li>
+        <li>στην εκτέλεση σύμβασης, εφόσον προκύψει συνεργασία</li>
+        <li>στη συμμόρφωση της εταιρείας με νομική υποχρέωση</li>
+        <li>στο έννομο συμφέρον της εταιρείας για την ασφαλή και εύρυθμη λειτουργία της ιστοσελίδας και τη διαχείριση των αιτημάτων της, υπό την προϋπόθεση ότι δεν υπερισχύουν τα δικαιώματα και οι ελευθερίες σας</li>
+      </ul>
+    </div>
+
+    <div id="p5" class="legal-section">
+      <div class="legal-section-title"><span class="num">5.</span> Αποδέκτες των δεδομένων</div>
+      <p>
+        Πρόσβαση στα προσωπικά σας δεδομένα έχουν μόνο εξουσιοδοτημένα πρόσωπα της DELTAENERGY και, όπου απαιτείται, συνεργαζόμενοι πάροχοι ή εκτελούντες την επεξεργασία για λογαριασμό της εταιρείας, όπως ενδεικτικά πάροχοι φιλοξενίας ιστοσελίδας, τεχνικής υποστήριξης, εταιρικού email, CRM ή άλλων αναγκαίων ψηφιακών υπηρεσιών.
+      </p>
+      <p>
+        Η DELTAENERGY δεν πωλεί, δεν εκμισθώνει και δεν παραχωρεί τα προσωπικά σας δεδομένα σε τρίτους για ανεξάρτητη εμπορική εκμετάλλευση. Διαβίβαση δεδομένων σε τρίτους γίνεται μόνο εφόσον απαιτείται για την εξυπηρέτηση του αιτήματός σας, για τη νόμιμη λειτουργία της ιστοσελίδας ή όταν επιβάλλεται από τον νόμο.
+      </p>
+    </div>
+
+    <div id="p6" class="legal-section">
+      <div class="legal-section-title"><span class="num">6.</span> Χρόνος διατήρησης</div>
+      <p>
+        Τα προσωπικά σας δεδομένα τηρούνται μόνο για όσο χρονικό διάστημα είναι αναγκαίο για την εξυπηρέτηση του σκοπού για τον οποίο συλλέχθηκαν και, σε κάθε περίπτωση, για όσο απαιτείται από τη νομοθεσία, τη φορολογική ή εμπορική υποχρέωση της εταιρείας ή για την αντιμετώπιση τυχόν νομικών αξιώσεων.
+      </p>
+      <p>
+        Στοιχεία που υποβάλλονται μέσω φόρμας επικοινωνίας ή εκδήλωσης ενδιαφέροντος διατηρούνται για εύλογο χρονικό διάστημα, εκτός αν προκύψει συνεργασία ή αν ο νόμος απαιτεί μεγαλύτερη περίοδο διατήρησης.
+      </p>
+    </div>
+
+    <div id="p7" class="legal-section">
+      <div class="legal-section-title"><span class="num">7.</span> Ασφάλεια δεδομένων</div>
+      <p>
+        Η DELTAENERGY λαμβάνει κατάλληλα τεχνικά και οργανωτικά μέτρα για την προστασία των προσωπικών δεδομένων από απώλεια, αλλοίωση, μη εξουσιοδοτημένη πρόσβαση, διαρροή ή καταστροφή. Παρά ταύτα, καμία μετάδοση δεδομένων μέσω διαδικτύου ή μέθοδος ηλεκτρονικής αποθήκευσης δεν μπορεί να εγγυηθεί απόλυτη ασφάλεια.
+      </p>
+    </div>
+
+    <div id="p8" class="legal-section">
+      <div class="legal-section-title"><span class="num">8.</span> Δικαιώματα υποκειμένων δεδομένων</div>
+      <p>Σύμφωνα με τον GDPR, έχετε τα ακόλουθα δικαιώματα, υπό τις προϋποθέσεις που ορίζει ο νόμος:</p>
+      <ul class="legal-list">
+        <li>δικαίωμα ενημέρωσης και πρόσβασης στα δεδομένα σας</li>
+        <li>δικαίωμα διόρθωσης ανακριβών ή ελλιπών στοιχείων</li>
+        <li>δικαίωμα διαγραφής</li>
+        <li>δικαίωμα περιορισμού της επεξεργασίας</li>
+        <li>δικαίωμα φορητότητας</li>
+        <li>δικαίωμα εναντίωσης στην επεξεργασία</li>
+        <li>δικαίωμα ανάκλησης της συγκατάθεσής σας, όπου η επεξεργασία βασίζεται σε συγκατάθεση, χωρίς να θίγεται η νομιμότητα της επεξεργασίας που προηγήθηκε της ανάκλησης</li>
+      </ul>
+      <p>Για την άσκηση των δικαιωμάτων σας μπορείτε να επικοινωνείτε στο <a href="mailto:info@deltaenergy.gr" style="color:var(--green)">info@deltaenergy.gr</a>. Η εταιρεία θα καταβάλει κάθε προσπάθεια να απαντήσει εντός των προθεσμιών που προβλέπει η ισχύουσα νομοθεσία.</p>
+      <p>Επίσης, έχετε δικαίωμα να υποβάλετε καταγγελία στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ), εφόσον θεωρείτε ότι η επεξεργασία των δεδομένων σας παραβιάζει την ισχύουσα νομοθεσία.</p>
+    </div>
+
+    <div id="p9" class="legal-section">
+      <div class="legal-section-title"><span class="num">9.</span> Πολιτική Cookies</div>
+      <p>Η ιστοσελίδα μπορεί να χρησιμοποιεί cookies και παρόμοιες τεχνολογίες για την ορθή λειτουργία της, τη βελτίωση της εμπειρίας χρήστη, τη διασφάλιση τεχνικής απόδοσης και, εφόσον έχει ρυθμιστεί ανάλογα, για στατιστική ανάλυση ή άλλες πρόσθετες λειτουργίες.</p>
+      <p>Τα cookies ενδέχεται να περιλαμβάνουν:</p>
+      <ul class="legal-list">
+        <li>Απολύτως αναγκαία cookies, που απαιτούνται για τη βασική λειτουργία της ιστοσελίδας</li>
+        <li>Cookies λειτουργικότητας, που θυμούνται επιλογές και προτιμήσεις</li>
+        <li>Cookies στατιστικών/απόδοσης, εφόσον χρησιμοποιούνται εργαλεία μέτρησης επισκεψιμότητας</li>
+        <li>Cookies τρίτων, εφόσον ενσωματώνονται υπηρεσίες ή περιεχόμενο τρίτων</li>
+      </ul>
+      <p>Όπου απαιτείται από τη νομοθεσία, η χρήση μη αναγκαίων cookies πραγματοποιείται μόνο κατόπιν της συγκατάθεσής σας μέσω του σχετικού μηχανισμού επιλογής (cookie banner). Μπορείτε επίσης να ρυθμίσετε ή να διαγράψετε cookies μέσω του προγράμματος περιήγησής σας. Η απενεργοποίηση ορισμένων cookies ενδέχεται να επηρεάσει τη λειτουργικότητα της ιστοσελίδας.</p>
+    </div>
+
+    <div id="p10" class="legal-section">
+      <div class="legal-section-title"><span class="num">10.</span> Σύνδεσμοι κοινωνικών δικτύων και υπηρεσιών τρίτων</div>
+      <p>
+        Η ιστοσελίδα ενδέχεται να περιλαμβάνει συνδέσμους ή παραπομπές σε υπηρεσίες τρίτων, όπως μέσα κοινωνικής δικτύωσης ή εξωτερικές πλατφόρμες. Η πρόσβαση και χρήση αυτών των υπηρεσιών διέπεται από τις αντίστοιχες πολιτικές απορρήτου των τρίτων παρόχων. Η DELTAENERGY δεν ευθύνεται για την επεξεργασία δεδομένων που πραγματοποιείται από τρίτους εκτός της δικής της ιστοσελίδας.
+      </p>
+    </div>
+
+    <div id="p11" class="legal-section">
+      <div class="legal-section-title"><span class="num">11.</span> Τροποποιήσεις της παρούσας πολιτικής</div>
+      <p>
+        Η DELTAENERGY διατηρεί το δικαίωμα να τροποποιεί την παρούσα Πολιτική Απορρήτου και τους Όρους Χρήσης, οποτεδήποτε αυτό κρίνεται αναγκαίο, χωρίς προηγούμενη ειδοποίηση. Κάθε τροποποίηση θα αναρτάται στην παρούσα σελίδα και θα ισχύει από τη δημοσίευσή της.
+      </p>
+    </div>
+
+    <div id="p12" class="legal-section">
+      <div class="legal-section-title"><span class="num">12.</span> Επικοινωνία</div>
+      <p>Για οποιαδήποτε απορία σχετικά με τους παρόντες Όρους Χρήσης ή με την επεξεργασία των προσωπικών σας δεδομένων, μπορείτε να επικοινωνείτε μαζί μας στα ακόλουθα στοιχεία:</p>
+      <div class="contact-box">
+        <strong>DELTAENERGY</strong><br>
+        Διεύθυνση: Θριασίων 17, Άνω Πετράλωνα<br>
+        Τηλέφωνο: <a href="tel:+302109210702">+30 21 0921 0702</a><br>
+        Email: <a href="mailto:info@deltaenergy.gr">info@deltaenergy.gr</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="legal-footer">
+    <p>© 2025 Delta Energy. Όλα τα δικαιώματα διατηρούνται.</p>
+    <p style="margin-top:6px"><a href="index.html">← Επιστροφή στην αρχική σελίδα</a></p>
+  </div>
+
+</body>
+</html>
